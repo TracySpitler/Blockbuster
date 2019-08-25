@@ -3,7 +3,7 @@ var NODE_ENV = process.env.NODE_ENV || 'development';
 
 // use dotenv to load our env vars in the .env, into process.env
 if (NODE_ENV === 'development') {
-  require('dotenv').load();
+  require('dotenv').config();
 }
 
 // include
