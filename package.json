@@ -1,0 +1,30 @@
+{
+  "name": "blockbuster",
+  "version": "1.0.0",
+  "description": "An easier way to sift through all of those movies.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node bin/www",
+    "server": "nodemon bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TracySpitler/Blockbuster.git"
+  },
+  "author": "TSpitler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TracySpitler/Blockbuster/issues"
+  },
+  "homepage": "https://github.com/TracySpitler/Blockbuster#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
