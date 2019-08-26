@@ -12,7 +12,7 @@ An easier way to sift through all of those movies.
 Clone the repo:
 
 ```
-$ git clone https://github.com/TracySpitler/Shopalot.git
+$ git clone https://github.com/TracySpitler/Blockbuster.git
 ```
 
 ### Prerequisites
