@@ -6,17 +6,16 @@ html, body {
 }
 
 body {
-  background-color: #f3f3f3;
+  background-color: white;
 }
 
 .App {
   text-align: center;
 }
 
-.gradient {
-  background: #02AAB0;
-  background-image: linear-gradient(rgb(255,71,118), rgb(255,91,156));
-  color: white;
+.navbar {
+  background-image: linear-gradient(to right, rgb(82,197,203), rgb(68,213,177));
+  background-color: white !important;
 }
 
 /******************* cards *******************/
@@ -31,6 +30,19 @@ body {
 
 .rounded-bottom {
   border-radius: 0 0 23px 23px !important;
+  color: #212127 !important;
+}
+
+.unwanted .fa-circle {
+  background: linear-gradient(to right, rgb(255,71,118), rgb(255,91,156));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.keeper .fa-circle {
+  background: linear-gradient(to left, rgb(82,197,203), rgb(68,213,177));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /******************* 404 page *******************/
