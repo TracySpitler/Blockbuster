@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Browse from '../views/Browse';
 import NotFound from '../views/NotFound';
 
-const AppRouter = () => {
+const Routes = () => {
 
   return (
 
@@ -16,4 +16,4 @@ const AppRouter = () => {
   )
 };
 
-export default AppRouter;
+export default Routes;
