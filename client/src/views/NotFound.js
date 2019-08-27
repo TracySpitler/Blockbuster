@@ -26,21 +26,21 @@ class NotFound extends Component {
                 height: '100vh',
                 width: '100vw',
               }} onMouseMove={this.handleMovement}>
-              
-        <div class="box">
-          <div class="box__ghost">
-            <div class="symbol"></div>
-            <div class="symbol"></div>
-            <div class="symbol"></div>
-            <div class="symbol"></div>
-            <div class="symbol"></div>
-            <div class="symbol"></div>
-            <div class="box__ghost-container">
-              <div class="box__ghost-eyes">
-                <div class="box__eye-left"></div>
-                <div class="box__eye-right"></div>
+
+        <div className="box">
+          <div className="box__ghost">
+            <div className="symbol"></div>
+            <div className="symbol"></div>
+            <div className="symbol"></div>
+            <div className="symbol"></div>
+            <div className="symbol"></div>
+            <div className="symbol"></div>
+            <div className="box__ghost-container">
+              <div className="box__ghost-eyes">
+                <div className="box__eye-left"></div>
+                <div className="box__eye-right"></div>
               </div>
-              <div class="box__ghost-bottom">
+              <div className="box__ghost-bottom">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -48,15 +48,15 @@ class NotFound extends Component {
                 <div></div>
               </div>
             </div>
-            <div class="box__ghost-shadow"></div>
+            <div className="box__ghost-shadow"></div>
           </div>
 
-          <div class="box__description">
-            <div class="box__description-container">
-              <div class="box__description-title">Whoops!</div>
-              <div class="box__description-text">It seems like we couldn't find the page you were looking for</div>
+          <div className="box__description">
+            <div className="box__description-container">
+              <div className="box__description-title">Whoops!</div>
+              <div className="box__description-text">It seems like we couldn't find the page you were looking for</div>
             </div>
-            <a href="/" class="box__button text-center">Take Me Home</a>
+            <a href="/" className="box__button text-center">Take Me Home</a>
           </div>
 
         </div>
