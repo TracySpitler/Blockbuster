@@ -14,8 +14,8 @@ app.use(bodyParser.json());
 const db = require('./config/mongoose');
 
 // routes
-const index = require('./routes/index');
-app.use('/', index);
+const movies = require('./routes/api/movies');
+app.use('/api/movies', movies);
 
 // serve static assets (build) if in production
 if (process.env.NODE_ENV === 'production') {
