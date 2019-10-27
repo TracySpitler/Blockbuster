@@ -23,7 +23,7 @@ class Unwanted extends Component {
               <div className="card">
                 <div className="view overlay rounded-top">
                   <img className="card-img-top" src={poster} alt={movie.title}/>
-                  <a className="video" target="_blank" href={movie.video_url}>
+                  <a className="video" target="_blank" rel="noopener noreferrer" href={movie.video_url}>
                     <div className="mask rgba-white-slight"></div>
                   </a>
                 </div>
