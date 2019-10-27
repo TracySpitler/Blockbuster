@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
+import AddMovie from './AddMovie.js'
+import { NavLink } from 'react-router-dom'
 
 class Navbar extends Component {
 
   render() {
     return (
 
-      <nav className="navbar navbar-light">
-        <a className="navbar-brand" href="/">Navbar</a>
-        <button className="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-          aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span className="dark-blue-text"><i
-              className="fas fa-bars fa-1x"></i></span></button>
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent1">
+      <nav className="navbar navbar-expand-md navbar-dark">
+        <h2 className="nav-link white-text">Your DVD's</h2>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="/">Browse Movies<span className="sr-only">(current)</span></a>
+            <li className="nav-item">
+              <NavLink className= "nav-link" activeClassName='is-active' to='/gothrough'>Go Through</NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/keep">Keepers</a>
+              <NavLink className= "nav-link" activeClassName='is-active' to='/keepers'>Keepers</NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/unwanted">Unwanted</a>
+              <NavLink className= "nav-link" activeClassName='is-active' to='/unwanted'>Unwanted</NavLink>
             </li>
           </ul>
+          <span className="navbar-text white-text">
+            <AddMovie />
+          </span>
         </div>
       </nav>
     )
