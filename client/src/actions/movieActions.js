@@ -3,7 +3,6 @@ import axios from 'axios';
 
 // action to set the GET_MOVIES state
 export const getMovies = () => dispatch => {
-  //dispatch(setItemsLoading());
   axios
     .get('/api/movies')
     .then(res =>
