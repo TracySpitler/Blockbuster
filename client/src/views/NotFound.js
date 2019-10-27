@@ -21,9 +21,9 @@ class NotFound extends Component {
 
   render() {
     return (
-      <div className="background" style = {{ background: '#28254C',
+      <div className="background" style = {{ background: '#141414',
                 height: '100vh',
-                width: '100vw',
+                width: '100vw'
               }} onMouseMove={this.handleMovement}>
 
         <div className="box">
@@ -55,7 +55,7 @@ class NotFound extends Component {
               <div className="box__description-title">Whoops!</div>
               <div className="box__description-text">It seems like we couldn't find the page you were looking for</div>
             </div>
-            <a href="/" className="box__button text-center">Take Me Home</a>
+            <a href="/" className="box__button text-center is-active">Take Me Home</a>
           </div>
 
         </div>
