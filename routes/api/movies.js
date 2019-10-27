@@ -8,19 +8,9 @@ const Movie = require('../../models/movie');
 // @desc Get All Movies
 // @access Public
 router.get('/', (req, res) => {
-
   Movie.find()
-    .sort({ date: -1 })
+    .sort({ updated_at: -1 })
     .then(movies => res.json(movies));
-});
-
-// @route GET api/movies
-// @desc Get ONE Movie
-// @access Public
-router.get('/:id', (req, res) => {
-
-  Movie.findById(req.params.id)
-    .then(movie => res.json(movie));
 });
 
 // @route POST api/movies
@@ -30,31 +20,49 @@ router.post('/', (req, res) => {
 
   const newMovie = new Movie({
     backdrop_path: req.body.backdrop_path,
-    genres: req.body.genres,
-    id: req.body.id,
+    poster_path: req.body.poster_path,
     imdb_id: req.body.imdb_id,
     keeper: req.body.keeper,
-    original_title: req.body.original_title,
-    overview: req.body.overview,
-    poster_path: req.body.poster_path,
-    release_date: req.body.release_date,
-    runtime: req.body.runtime,
     title: req.body.title,
-    video_url: req.body.video_url
+    video_url: req.body.video_url,
+    release_date: req.body.release_date,
+    overview: req.body.overview,
+    year: req.body.year
   });
 
   newMovie.save().then(movie => res.json(movie));
 });
 
+// @route POST api/movies
+// @desc Update a Movie (keeper)
+// @access Public
+router.post('/:id', (req, res) => {
+  Movie.findById(req.params.id, function(err, keep) {
+    if (err) {
+      // send errors
+      res.send({err});
+    }
+    // update the movie
+    keep.keeper = 1;
+    // save the movie
+    keep.save().then(keep => res.json(keep));
+  });
+})
+
 // @route DELETE api/movies
-// @desc Delete a Movie
+// @desc Remove a Movie (unwanted) (no deleting from db)
 // @access Public
 router.delete('/:id', (req, res) => {
-
-  Movie.findById(req.params.id)
-    // Callback returns a successful or unsuccessful movie deletion
-    .then(movie => movie.remove().then(() => res.json({success: "Movie deleted successfully"})))
-    .catch(err => res.status(404).json({error: "Error when deleting movie"}));
+  Movie.findById(req.params.id, function(err, remove) {
+    if (err) {
+      // send errors
+      res.send({err});
+    }
+    // update the movie
+    remove.keeper = 0;
+    // save the movie
+    remove.save().then(remove => res.json(remove));
+  });
 })
 
 module.exports = router;
