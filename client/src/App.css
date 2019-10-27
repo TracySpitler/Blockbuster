@@ -27,6 +27,8 @@ body {
 
 .card {
   border-radius: 23px;
+  background-color: #141414;
+  color: #fff;
 }
 
 .rounded-top {
@@ -35,7 +37,7 @@ body {
 
 .rounded-bottom {
   border-radius: 0 0 23px 23px !important;
-  color: #212127 !important;
+  color: #fff !important;
 }
 
 .unwanted .fa-circle {

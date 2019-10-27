@@ -57,7 +57,7 @@ class AddMovie extends Component {
               <div className="modal-header gradient">
                 <h4 className="modal-title w-100" id="myModalLabel">Add a Movie</h4>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                  <span className="white-text" aria-hidden="true">&times;</span>
+                  <span className="black-text" aria-hidden="true">&times;</span>
                 </button>
               </div>
               <form id="AddForm" className="modal-body">
