@@ -22,7 +22,6 @@ class GoThrough extends Component {
     const movieList = movies.length ? (
       movies.map(movie => {
         const poster = "http://image.tmdb.org/t/p/original/" + movie.poster_path;
-        const youtube = "http://www.youtube.com/watch_popup?v=" + movie.video_url;
         return (
             <div key={movie._id} className="my-3 col-lg-4 col-md-6 col-sm-12">
               <div className="card">

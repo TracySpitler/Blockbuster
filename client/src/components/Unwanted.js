@@ -18,13 +18,12 @@ class Unwanted extends Component {
     const movieList = movies.length ? (
       movies.map(movie => {
         const poster = "http://image.tmdb.org/t/p/original/" + movie.poster_path;
-        const youtube = "http://www.youtube.com/watch_popup?v=" + movie.video_url;
         return (
             <div key={movie._id} className="my-3 col-lg-4 col-md-6 col-sm-12">
               <div className="card">
                 <div className="view overlay rounded-top">
                   <img className="card-img-top" src={poster} alt={movie.title}/>
-                  <a className="video" href={youtube}>
+                  <a className="video" href={movie.video_url}>
                     <div className="mask rgba-white-slight"></div>
                   </a>
                 </div>
