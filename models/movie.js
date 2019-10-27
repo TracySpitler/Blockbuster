@@ -17,6 +17,7 @@ const MovieSchema = new Schema({
     imdb_id: {
       type: String,
       required: false,
+      unique: true
     },
     keeper: {
       type: Boolean,
