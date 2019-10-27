@@ -27,7 +27,7 @@ body {
 
 .card {
   border-radius: 23px;
-  background-color: #141414;
+  background-color: rgba(255, 255, 255, .1);
   color: #fff;
 }
 
@@ -40,20 +40,20 @@ body {
   color: #fff !important;
 }
 
-.unwanted .fa-circle {
+.unwanted .fa-ban {
   background-color: #fbb034;
   background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.unwanted-removed .fa-circle {
+.unwanted-removed .fa-ban {
   background: linear-gradient(to right, rgb(169,169,169), rgb(169,169,169)) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
 
-.keeper .fa-circle {
+.keeper .fa-star {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

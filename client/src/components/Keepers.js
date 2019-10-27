@@ -32,7 +32,7 @@ class Keepers extends Component {
                   <ul className="list-unstyled list-inline font-small d-flex justify-content-around mt-3 mb-0">
                     <li className="list-inline-item pr-2">
                       <span className="fa-stack click fa-lg unwanted">
-                        <i className="fa fa-circle fa-stack-2x"></i>
+                        <i className="fa-stack-2x"></i>
                         <i id={movie._id} onClick={this.handleRemove} className="fas fa-ban fa-stack-1x fa-inverse"></i>
                       </span>
                     </li>
@@ -41,7 +41,7 @@ class Keepers extends Component {
                     </li>
                     <li className="list-inline-item">
                       <span className="fa-stack fa-lg unwanted-removed">
-                        <i className="fa fa-circle fa-stack-2x"></i>
+                        <i className="fa-stack-2x"></i>
                         <i className="fas fa-star fa-stack-1x fa-inverse"></i>
                       </span>
                     </li>
