@@ -17,6 +17,7 @@ router.get('/', (req, res) => {
 // @desc Create a Movie
 // @access Public
 router.post('/', (req, res) => {
+  console.log("testing api");
 
   const newMovie = new Movie({
     backdrop_path: req.body.backdrop_path,

@@ -16,6 +16,7 @@ export const getMovies = () => dispatch => {
 
 // action to ADD_MOVIE to the server
 export const addMovie = (movie) => dispatch => {
+  console.log("testing");
   axios
     .post('/api/movies', movie)
     .then(res =>
