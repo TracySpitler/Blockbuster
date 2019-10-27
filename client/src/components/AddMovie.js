@@ -18,7 +18,7 @@ class AddMovie extends Component {
       imdb_id: this.state.imdb_id,
       video_url: this.state.video_url,
     };
-    console.log("testing");
+    
     axios
       .get('https://api.themoviedb.org/3/find/' + newMovie.imdb_id + '?api_key=2cb547f6b21d9fecbf9c3ada7fa19ba3&language=en-US&external_source=imdb_id')
       .then(res => {
@@ -35,7 +35,7 @@ class AddMovie extends Component {
         newMovie.overview = res.data.movie_results[0].overview;
 
         // add item via addMovie action
-        //this.props.addMovie(newMovie);
+        this.props.addMovie(newMovie);
       });
   }
 
