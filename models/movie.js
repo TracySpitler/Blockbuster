@@ -7,31 +7,21 @@ const MovieSchema = new Schema({
 
     backdrop_path: {
       type: String,
-      required: false
+      required: false,
+      default: "https://screenrant.com/wp-content/uploads/2017/12/Deadpool-2-Cable-banner.jpg"
     },
     created_at: {
       type: Date,
       required: false
     },
-    genres: [{
-      id : Number,
-      name : String
-    }],
-    id: {
-      type: Number,
-      required: true
-    },
     imdb_id: {
       type: String,
-      required: false
+      required: false,
     },
     keeper: {
       type: Boolean,
-      required: false
-    },
-    original_title: {
-      type: String,
-      required: false
+      required: false,
+      default: null
     },
     overview: {
       type: String,
@@ -42,26 +32,26 @@ const MovieSchema = new Schema({
       required: false
     },
     release_date: {
-      type: Date,
-      required: false
-    },
-    runtime: {
-      type: Number,
+      type: String,
       required: false
     },
     title: {
       type: String,
-      required: true
+      required: false
     },
     updated_at: {
       type: Date,
-      required: true
+      required: false
     },
     video_url: {
       type: String,
+      required: false,
+      default: "tgbNymZ7vqY"
+    },
+    year: {
+      type: Number,
       required: false
     },
-
 });
 
 MovieSchema.pre('save', function(next) {
@@ -77,4 +67,4 @@ MovieSchema.pre('save', function(next) {
   next();
 })
 
-module.exports = Movie = mongoose.model('movie', MovieSchema);
+module.exports = Movie = mongoose.model('movie', MovieSchema, 'movies');
