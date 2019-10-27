@@ -37,6 +37,8 @@ class AddMovie extends Component {
         // add item via addMovie action
         this.props.addMovie(newMovie);
       });
+
+    document.getElementById("AddForm").reset();
   }
 
   render() {
@@ -58,11 +60,11 @@ class AddMovie extends Component {
                   <span className="white-text" aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div className="modal-body">
+              <form id="AddForm" className="modal-body">
                 <input type="text" id="input_imbd_id" className="form-control mb-4" placeholder="Imdb Id" name="imdb_id" onChange={this.onChange.bind(this)} />
                 <input type="text" id="input_video_url" className="form-control mb-4" placeholder="Video Url" name="video_url" onChange={this.onChange.bind(this)} />
 
-              </div>
+              </form>
               <div className="modal-footer justify-content-center">
                 <button type="submit" onClick={this.onSubmit} data-dismiss="modal" value="Submit" className="btn is-active white-text">Save Movie</button>
               </div>
