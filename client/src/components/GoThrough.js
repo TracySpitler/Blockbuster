@@ -23,7 +23,7 @@ class GoThrough extends Component {
       movies.map(movie => {
         const poster = "http://image.tmdb.org/t/p/original/" + movie.poster_path;
         return (
-            <div key={movie._id} className="my-3 col-lg-4 col-md-6 col-sm-12">
+            <div key={movie._id} className="my-3 col-xl-3 col-lg-4 col-md-6 col-sm-12">
               <div className="card">
                 <div className="view overlay rounded-top">
                   <img className="card-img-top" src={poster} alt={movie.title}/>
